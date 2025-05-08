@@ -8,6 +8,13 @@
 * Click "Download for \[Your OS]"
 * Follow the installation prompts
 
+✨ Optional: Install the **VS Code Icons Theme**
+
+* In VS Code, go to Extensions (left sidebar)
+* Search for **"VS Code Icons"** and install it
+* After installing, click "Set File Icon Theme" to apply it
+* This makes your file explorer easier to navigate and visually organized
+
 #### 2. Install Node.js
 
 * Go to [https://nodejs.org/](https://nodejs.org/)
