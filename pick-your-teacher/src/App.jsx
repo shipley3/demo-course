@@ -1,14 +1,33 @@
-// Declare Variables for teacher name and subject
+import React, { useState } from "react";
+import "./index.css";
 
-// Copilot Prompt: Group teacher info into an object
+// Final Pick Your Teacher App
+export default function App() {
+  const teachers = [
+    { name: "Ms. Rivera", subject: "Math" },
+    { name: "Mr. Chen", subject: "History" },
+    { name: "Ms. Thompson", subject: "Science" }
+  ];
 
-function App() {
+  const [selected, setSelected] = useState("");
+
   return (
-    <div>
-      <h2></h2>
-      <p></p>
+    <div className="container">
+      <h1>Pick Your Teacher</h1>
+      <div className="teacher-grid">
+        {teachers.map((teacher) => (
+          <div
+            key={teacher.name}
+            className={selected === teacher.name ? "card selected" : "card"}
+          >
+            <h2>{teacher.name}</h2>
+            <p>{teacher.subject}</p>
+            <button onClick={() => setSelected(teacher.name)}>
+              {selected === teacher.name ? "Selected" : "Select"}
+            </button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
-
-export default App;
