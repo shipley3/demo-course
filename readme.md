@@ -1,4 +1,4 @@
-## Pre-Class Document #1: Setup Instructions
+## #1: Setup Instructions
 
 ### 🚀 Getting Ready: VS Code, GitHub Copilot, and Your Files
 
@@ -17,8 +17,9 @@
 #### 3. Set Up GitHub Copilot
 
 * Create a **GitHub Education account** using your Penn email:
-    * Go to [https://education.github.com/](https://education.github.com/)
-    * Click "Get benefits" and follow the instructions to verify your student status
+
+  * Go to [https://education.github.com/](https://education.github.com/)
+  * Click "Get benefits" and follow the instructions to verify your student status
 * Once approved, you can access GitHub Copilot for free
 * Install the **GitHub Copilot extension** in VS Code
 * Sign in to VS Code with your GitHub Education account
@@ -26,7 +27,8 @@
 
 #### 4. Download the Project Files
 
-* You will receive a link to download a `.zip` file with the project
+* Download the code here: [https://github.com/shipley3/demo-course](https://github.com/shipley3/demo-course)
+* Click the green "Code" button and choose "Download ZIP"
 * Unzip the folder and open it in VS Code:
 
   * VS Code > File > Open Folder > Select unzipped folder
@@ -39,12 +41,27 @@ In your terminal inside VS Code:
 npm install
 npm run dev
 ```
+> **Note:** You will always use the command `npm run dev` to run your program. If you want to stop the server, press `Ctrl + C` in the terminal.
 
 Then open your browser and go to: `http://localhost:5173`
 
 ---
 
-## Pre-Class Document #2: Quick React Dictionary
+## #2: Quick React Dictionary
+
+### 🌟 What is React?
+
+React is a tool that helps us build websites using reusable pieces called **components**. Instead of updating the whole page when something changes, React only updates the part that needs to change. This keeps things fast and organized.
+
+Think of React as LEGO: you build a webpage using blocks (components) that each have their own job.
+
+### ⚡ What is Vite?
+
+Vite is the tool that runs our app while we build it. It:
+
+* Starts your app quickly
+* Instantly shows updates in your browser when you change the code
+* Prepares all your files for sharing or publishing later
 
 ### 🧠 Key Terms to Know
 
@@ -63,7 +80,7 @@ Then open your browser and go to: `http://localhost:5173`
 
 ---
 
-## Pre-Class Document #3: How React Files Flow
+## #3: How React Files Flow
 
 ### 🗂️ File Structure and Flow
 
