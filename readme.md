@@ -41,7 +41,6 @@ In your terminal inside VS Code:
 npm install
 npm run dev
 ```
-> **Note:** You will always use the command `npm run dev` to run your program. If you want to stop the server, press `Ctrl + C` in the terminal.
 
 Then open your browser and go to: `http://localhost:5173`
 
@@ -63,20 +62,24 @@ Vite is the tool that runs our app while we build it. It:
 * Instantly shows updates in your browser when you change the code
 * Prepares all your files for sharing or publishing later
 
-### 🧠 Key Terms to Know
+### 🔤 Other Helpful Terms
 
-| Term       | Definition                                                              |
-| ---------- | ----------------------------------------------------------------------- |
-| JSX        | HTML-like code inside JavaScript — used to build UI elements in React   |
-| Component  | A reusable piece of UI — like a custom tag (`<App />`)                  |
-| Prop       | A value you pass to a component to customize it                         |
-| State      | Data that changes — React watches it and updates the UI                 |
-| useState   | React function that creates a piece of state inside a component         |
-| map()      | A function to loop through arrays and render elements                   |
-| const      | Declares a variable you won’t reassign (preferred in React)             |
-| Vite       | A tool that runs your app and bundles it for the browser                |
-| Bundle     | A compressed, combined version of all your files ready for browsers     |
-| Dev Server | Runs locally so you can test your app in the browser during development |
+| Term         | Definition                                                                                                  |
+| ------------ | ----------------------------------------------------------------------------------------------------------- |
+| HTML         | A language that structures what’s on a webpage (headings, buttons, text)                                    |
+| JavaScript   | A programming language that makes the webpage interactive                                                   |
+| div          | A basic HTML container — used to group content and layout elements                                          |
+| JSX          | HTML-like code inside JavaScript — used to build UI elements in React                                       |
+| Component    | A reusable piece of UI — like a custom tag (`<App />`)                                                      |
+| Prop         | A value you pass to a component to customize it                                                             |
+| State        | Data that changes — React watches it and updates the UI                                                     |
+| useState     | React function that creates a piece of state inside a component                                             |
+| map()        | A function to loop through arrays and render elements                                                       |
+| const        | Declares a variable you won’t reassign (preferred in React)                                                 |
+| Vite         | A tool that runs your app and bundles it for the browser                                                    |
+| Bundle       | A compressed, combined version of all your files ready for browsers                                         |
+| Dev Server   | Runs locally so you can test your app in the browser during development                                     |
+| Config Files | Files like `package.json`, `vite.config.js`, or `.gitignore` that set rules for how your app runs or builds |
 
 ---
 
