@@ -1,14 +1,12 @@
-const teacherName = "Ms. Rivera";
-const teacherSubject = "Math";
+// Declare Variables for teacher name and subject
 
 // Copilot Prompt: Group teacher info into an object
-// const teacher = { name: "Ms. Rivera", subject: "Math" };
 
 function App() {
   return (
     <div>
-      <h2>{teacherName}</h2>
-      <p>{teacherSubject}</p>
+      <h2></h2>
+      <p></p>
     </div>
   );
 }
