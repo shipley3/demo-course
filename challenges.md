@@ -2,8 +2,6 @@
 
 Extend your "Pick Your Teacher" app with five creative and technical bonus challenges. Each one builds practical skills in React while making your app more interactive and visually engaging.
 
----
-
 ## 🔤 Task 1: Add a Comment to a Teacher Card
 
 **Goal**: Let users leave a comment for a selected teacher.
@@ -49,6 +47,13 @@ const [comments, setComments] = useState({});
 }
 ```
 
+**Copilot Prompt Ideas:**
+
+* `// Track user comments for each teacher using React state`
+* `// On input change, update comment for the selected teacher`
+* `// Show the comment below the card if one has been entered`
+* `// Style the comment to make it visually distinct`
+
 ---
 
 ## ➕ Task 2: Add Your Own Teacher
@@ -76,6 +81,13 @@ const [newSubject, setNewSubject] = useState("");
   setNewSubject("");
 }}>Add Teacher</button>
 ```
+
+**Copilot Prompt Ideas:**
+
+* `// Add input fields for new teacher name and subject`
+* `// When the button is clicked, push a new teacher to the array`
+* `// Clear the form after submission`
+* `// Prevent submission if name or subject is blank`
 
 ---
 
@@ -111,6 +123,13 @@ const [page, setPage] = useState("home");
 4. **Separate Component for TeacherListPage**
    Display the list of all teacher cards on its own page.
 
+**Copilot Prompt Ideas:**
+
+* `// Use a page variable to switch between home and teacher list views`
+* `// Create a navigation button to view all teachers`
+* `// Render all teacher cards on the separate page`
+* `// Add a back button to return to home view`
+
 ---
 
 ## 🎨 Task 4: Style Studio for Teacher Cards
@@ -123,9 +142,9 @@ const [page, setPage] = useState("home");
 
 ```js
 const teachers = [
-  { name: "Ms. Rivera", subject: "Math", color: "#FFD6D6", emoji: "📐" },
-  { name: "Mr. Chen", subject: "History", color: "#D6F5FF", emoji: "📜" },
-  { name: "Ms. Thompson", subject: "Science", color: "#D6FFD6", emoji: "🔬" },
+  { name: "Gad Allon", subject: "Business Management", color: "#FFEFDB", emoji: "📊" },
+  { name: "Laura Huang", subject: "Entrepreneurship", color: "#E6F7FF", emoji: "🚀" },
+  { name: "Igor Kouzin", subject: "Finance", color: "#F0FFF0", emoji: "💰" },
 ];
 ```
 
@@ -137,6 +156,13 @@ const teachers = [
   <p>{teacher.subject}</p>
 </div>
 ```
+
+**Copilot Prompt Ideas:**
+
+* `// Add color and emoji to each teacher object`
+* `// Use inline styles to change the background color of the card`
+* `// Add the emoji before the teacher name`
+* `// Use different colors to visually separate teachers`
 
 ---
 
@@ -171,4 +197,9 @@ const [newColor, setNewColor] = useState("#ffffff");
 const [newEmoji, setNewEmoji] = useState("");
 ```
 
----
+**Copilot Prompt Ideas:**
+
+* `// Add color picker and emoji input fields to the form`
+* `// Include color and emoji when creating a new teacher`
+* `// Use a controlled input for color and emoji`
+* `// Let users preview their card before adding`

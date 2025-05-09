@@ -5,13 +5,13 @@
 **Objective**: Show how separate pieces of data (name, subject) can be grouped into one object.
 
 ```js
-const teacherName = "Ms. Rivera";
-const teacherSubject = "Math";
+const teacherName = "Gad Allon;
+const teacherSubject = "Business Management";
 
 // ➡️ Combine
 const teacher = {
-  name: "Ms. Rivera",
-  subject: "Math"
+  name: "Gad Allon",
+  subject: "Business Management"
 };
 ```
 
@@ -46,8 +46,8 @@ return (
 
 ```js
 const teachers = [
-  { name: "Ms. Rivera", subject: "Math" },
-  { name: "Mr. Chen", subject: "History" }
+  { name: "Gad Allon", subject: "Business Management" },
+  { name: "Laura Huang", subject: "Entrepreneurship" }
 ];
 
 {teachers.map(teacher => (
