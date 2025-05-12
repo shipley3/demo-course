@@ -5,7 +5,7 @@
 **Objective**: Show how separate pieces of data (name, subject) can be grouped into one object.
 
 ```js
-const teacherName = "Gad Allon;
+const teacherName = "Gad Allon";
 const teacherSubject = "Business Management";
 
 // ➡️ Combine
@@ -40,25 +40,63 @@ return (
 
 ---
 
-## Step 3: Expanding to an Array + .map()
+## Step 3A: Inline Mapping with Basic HTML
 
-**Objective**: Create multiple cards with `.map()`
+**Objective**: Show multiple teachers using `.map()` without using a separate component.
 
-```js
-const teachers = [
-  { name: "Gad Allon", subject: "Business Management" },
-  { name: "Laura Huang", subject: "Entrepreneurship" }
-];
+```jsx
+function App() {
+  const teachers = [
+    { name: "Gad Allon", subject: "Business Management" },
+    { name: "Laura Huang", subject: "Entrepreneurship" }
+  ];
 
-{teachers.map(teacher => (
-  <TeacherCard teacher={teacher} />
+  return (
+    <div>
+      {teachers.map((teacher) => (
+        <div key={teacher.name} className="card">
+          <h2>{teacher.name}</h2>
+          <p>{teacher.subject}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+```
+
+**Prompt**: “What if we want to repeat this pattern in multiple places?”
+
+---
+
+## Step 3B: Creating a Reusable Component
+
+**Objective**: Refactor the repeated HTML into a reusable `TeacherCard` component.
+
+### `TeacherCard.jsx`
+
+```jsx
+function TeacherCard({ teacher }) {
+  return (
+    <div className="card">
+      <h2>{teacher.name}</h2>
+      <p>{teacher.subject}</p>
+    </div>
+  );
+}
+```
+
+### App Usage:
+
+```jsx
+{teachers.map((teacher) => (
+  <TeacherCard key={teacher.name} teacher={teacher} />
 ))}
 ```
 
 **Copilot Prompt**:
 
 ```js
-// Map over teachers to show each as a card
+// Create a reusable TeacherCard component with props
 ```
 
 ---
@@ -67,18 +105,44 @@ const teachers = [
 
 **Objective**: Track and conditionally render selected teacher
 
+Update your `App` to hold selection state and pass it to the card:
+
 ```js
 const [selected, setSelected] = useState("");
 
-<button onClick={() => setSelected(teacher.name)}>
-  {selected === teacher.name ? "Selected" : "Select"}
-</button>
+{teachers.map((teacher) => (
+  <TeacherCard
+    key={teacher.name}
+    teacher={teacher}
+    selected={selected}
+    onSelect={setSelected}
+  />
+))}
+```
+
+Update your `TeacherCard` component to use the props:
+
+```jsx
+function TeacherCard({ teacher, selected, onSelect }) {
+  const isSelected = selected === teacher.name;
+
+  return (
+    <div className={`card ${isSelected ? "selected" : ""}`}>
+      <h2>{teacher.name}</h2>
+      <p>{teacher.subject}</p>
+      <button onClick={() => onSelect(teacher.name)}>
+        {isSelected ? "Selected" : "Select"}
+      </button>
+    </div>
+  );
+}
 ```
 
 **Copilot Prompt**:
 
 ```js
 // Add a button to select this teacher
+// Highlight the selected teacher using props
 ```
 
 ---
